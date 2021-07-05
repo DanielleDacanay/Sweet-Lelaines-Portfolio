@@ -1,0 +1,49 @@
+@use '../custom' as *;
+
+.btn-rounded {
+    //this mixin hides buttons for smaller devices
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    //end of mixin
+    position: relative;
+    padding: 1rem 4.375rem 1rem 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: $white;
+
+    span {
+        position: absolute;
+        background-color: $primary;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 50%;
+        right: 9px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-repeat: no-repeat;
+
+        i {
+            color:$brown-dark;
+            font-size: 1rem;
+            line-height: 2.5rem;
+            background-repeat: no-repeat;
+            
+        }
+    }
+
+    &:hover {
+       // @include gradient;
+       background-color: $brown-pastel;
+       color: $white;
+    
+        span {
+            background-color: $brown-dark;
+            i {
+                color: $white;
+            }
+        }
+    }
+}
+

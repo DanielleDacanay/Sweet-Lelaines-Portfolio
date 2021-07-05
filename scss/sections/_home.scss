@@ -1,7 +1,7 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-.intro-section {
+.home{
     //@include gradient;
     background-color: $white;
     padding: 10rem 0 0 0;
@@ -11,22 +11,59 @@
 }
 
 .card {
-    .card-header{
-    padding: 4rem;
-
     &--pink{
-     background-color: $pink-pastel;
+    position: relative;
+    margin: 2rem;
+    border: 0.15rem solid $pink-pastel;
+    border-radius: 2%;
+
+        .card-header{
+            background-color: rgba($pink-pastel, 0.1);
+            padding: 0.5rem 0 0.5rem 1rem;
+            font-weight: 600;
+            color: $brown-dark;
+
+            .card-body{
+                background-color: transparent;
+            }
+        }
     }
 
     &--yellow{
-        background-color: $yellow-pastel;
-    }
+        position: relative;
+        margin: 2rem;
+        border: 0.15rem solid $yellow-pastel;
+        border-radius: 2%;
     
-    &--purple{
-        background-color: $purple-pastel;
-    }
+            .card-header{
+                background-color: rgba($yellow-pastel, 0.1);
+                padding: 0.5rem 0 0.5rem 1rem;
+                font-weight: 600;
+                color: $brown-dark;
 
-    }
+                .card-body{
+                    background-color: transparent;
+                }
+            }
+        }
+
+    &--purple{
+    position: relative;
+    margin: 2rem;
+    border: 0.15rem solid $purple-pastel;
+    border-radius: 2%;
+
+        .card-header{
+            background-color: rgba($purple-pastel, 0.1);
+            padding: 0.5rem 0 0.5rem 1rem;
+            font-weight: 600;
+            color: $brown-dark;
+
+            .card-body{
+                background-color: transparent;
+            }
+        }
+    }        
 }
 
 .border-animation {
